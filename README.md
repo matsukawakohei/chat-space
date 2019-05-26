@@ -11,7 +11,17 @@
 - belongs_to :group
 - belongs_to :user
 
+## usersテーブル
 
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|e-mail|string|null: false, add_index :users, :e-mail, unique: true|
+|password|string|null: false|
+
+### Association
+- has_many :groups through: :group_members
+- has_many :messages
 
 ## groupsテーブル
 
