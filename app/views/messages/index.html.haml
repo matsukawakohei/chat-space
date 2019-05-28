@@ -1,39 +1,32 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpace
-  %body
-    %header.header
-      %p グループを作成しました
-    %div.contents
-      %div.right-content
-        %div.content-heading
-          %p.text1 text1
-          %p.text2 text2
-          %div.edit Edit
-        %div.content-main
-          %div.message
-            = render partial: "main"
-            = render partial: "main"
-        %div.content-footing
-          %div.input-box
-            %p.text6 text6
-            %form
-              %label
-                %i.fas.fa-image
-                %input{ type: "file", style: "display:none"}
-          %div.send send
+%header.header
+  %p グループを作成しました
+.right-content
+  .content-heading
+    %p.text1 text1
+    %p.text2 text2
+    .edit Edit
+  .content-main
+    .message
+      = render partial: "main"
+      = render partial: "main"
+  .content-footing
+    .input-box
+      %p.text6 text6
+      %form
+        %label
+          %i.fas.fa-image
+          %input{ type: "file", style: "display:none"}
+    .send send
 
-      %div.left-content
-        %div.user
-          %div.user-box
-            %p.user-name user-name
-            %div.icons
-              = link_to root_path do
-                %i.far.fa-edit
-              = link_to root_path do
-                %i.fa.fa-cog
-        %div.group
-          = render partial: "side"
-          = render partial: "side"
+.left-content
+  .user
+    .user-box
+      %p.user-name user-name
+      .icons
+        = link_to root_path do
+          %i.far.fa-edit
+        = link_to root_path do
+          %i.fa.fa-cog
+  .group
+    = render partial: "side"
+    = render partial: "side"
