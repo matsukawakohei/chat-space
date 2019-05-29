@@ -7,14 +7,14 @@
       border-bottom: solid #eeeeee;
       position: relative;
       padding: 0 40px 0;
-        .text1 {
+        .main-group-name {
           margin: 35px 0 15px;
           font-size: 20px;
           color: #333333;
           float: left;
 
         }
-        .text2 {
+        .main-member-name {
             font-size: 12px;
             color: #999999;
             position: absolute;
@@ -40,16 +40,16 @@
       .message {
         height: 50px;
         margin-bottom: 40px;
-        .text-box {
+        .message-info {
           display: flex;
           margin-bottom: 10px;
-          .text3 {
+          .messenger-name {
           font-size: 16px;
           font-weight: bold;
           color: $blackcolor;
 
           }
-          .text4 {
+          .post-date {
           font-size: 12px;
           color: #999999;
           padding-left: 10px;
@@ -57,7 +57,7 @@
          }
 
         }
-      .text5 {
+      .post-message {
         font-size: 14px;
         color: $blackcolor;
 
@@ -81,7 +81,7 @@
         line-height: 50px;
         float: left;
         position: relative;
-        .text6 {
+        .send-message {
           font-size: 16px;
           color: $blackcolor;
 
