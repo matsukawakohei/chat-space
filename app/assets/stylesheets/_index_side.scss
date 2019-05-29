@@ -1,0 +1,59 @@
+.left-content {
+  width: 300px;
+  float:left;
+    .user{
+      height: 100px;
+      width: 100%;
+      background-color: #253141;
+      padding: 35px 20px 0;
+        .user-box {
+          position: relative;
+          .user-name {
+            width: 150px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $whitecolor;
+
+          }
+          .icons {
+            position: absolute;
+            right: 0;
+            top: 0;
+            .fa {
+              color: $whitecolor;
+            }
+            .far {
+              color: $whitecolor;
+
+            }
+
+          }
+
+        }
+
+    }
+
+    .group {
+      height: calc(100vh - 100px);
+      width: 100%;
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+        .side-group-name {
+          font-size: 15px;
+          font-weight: bold;
+          color: $whitecolor;
+          margin-bottom: 5px;
+
+        }
+
+        .side-post-message {
+          font-size: 11px;
+          font-weight: bold;
+          color: $whitecolor;
+          margin-bottom: 40px;
+
+        }
+
+    }
+    
+}

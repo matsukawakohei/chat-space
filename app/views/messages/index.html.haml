@@ -1,0 +1,33 @@
+%header.header
+  %p グループを作成しました
+  
+.right-content
+  .content-heading
+    %p.main-group-name main-group-name
+    %p.main-member-name main-member-name
+    .edit Edit
+  .content-main
+    .message
+      = render partial: "main"
+      = render partial: "main"
+  .content-footing
+    .input-box
+      %p.send-message send-message
+      %form
+        %label
+          %i.fas.fa-image
+          %input{ type: "file", style: "display:none"}
+    .send send
+
+.left-content
+  .user
+    .user-box
+      %p.user-name user-name
+      .icons
+        = link_to root_path do
+          %i.far.fa-edit
+        = link_to root_path do
+          %i.fa.fa-cog
+  .group
+    = render partial: "side"
+    = render partial: "side"

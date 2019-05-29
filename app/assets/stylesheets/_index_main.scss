@@ -1,0 +1,112 @@
+.right-content {
+  height: calc(100vh - 190px);
+  width: calc(100vw - 300px);
+  float: right;
+    .content-heading {
+      height: 100px;
+      border-bottom: solid #eeeeee;
+      position: relative;
+      padding: 0 40px 0;
+        .main-group-name {
+          margin: 35px 0 15px;
+          font-size: 20px;
+          color: #333333;
+          float: left;
+
+        }
+        .main-member-name {
+            font-size: 12px;
+            color: #999999;
+            position: absolute;
+            left: 40px;
+            bottom: 0;
+            
+        }
+        .edit {
+          height: 40px;
+          margin-top: 28px;
+          padding: 0 20px 0;
+          float: right;
+          color: $bluecolor;
+
+        }
+
+    }
+
+    .content-main {
+      height: calc(100vh - 190px);
+      padding: 46px 40px 0;
+      background-color: #fafafa;
+      .message {
+        height: 50px;
+        margin-bottom: 40px;
+        .message-info {
+          display: flex;
+          margin-bottom: 10px;
+          .messenger-name {
+          font-size: 16px;
+          font-weight: bold;
+          color: $blackcolor;
+
+          }
+          .post-date {
+          font-size: 12px;
+          color: #999999;
+          padding-left: 10px;
+
+         }
+
+        }
+      .post-message {
+        font-size: 14px;
+        color: $blackcolor;
+
+      }
+
+      }
+
+    }
+
+    .content-footing {
+      height: 90px;
+      width: 100%;
+      padding: 20px 40px;
+      background-color: gray;
+      box-sizing: border-box;
+      .input-box {
+        height: 50px;
+        width: calc(100% - 125px);
+        background-color: white;
+        padding: 0 10px;
+        line-height: 50px;
+        float: left;
+        position: relative;
+        .send-message {
+          font-size: 16px;
+          color: $blackcolor;
+
+        }
+        .fa-image {
+          font-size: 30px;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+
+        }
+
+      }
+      .send {
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        background-color: $bluecolor;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        float: right;
+        
+      }
+
+    }
+
+}
