@@ -20,16 +20,4 @@
           %input{ type: "file", style: "display:none"}
     .send send
 
-.left-content
-  .user
-    .user-box
-      %p.user-name
-        = current_user.name
-      .icons
-        = link_to root_path do
-          %i.far.fa-edit
-        =link_to edit_user_path(current_user), method: :get do
-          %i.fa.fa-cog
-  .group
-    = render partial: "side"
-    = render partial: "side"
+= render partial: 'groups/sideblock'
