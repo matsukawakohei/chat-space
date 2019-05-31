@@ -73,14 +73,23 @@
       padding: 20px 40px;
       background-color: gray;
       box-sizing: border-box;
+      .input-area {
+        height: 50px;
+        width: 100%;
+      }
       .input-box {
         height: 50px;
         width: calc(100% - 125px);
         background-color: white;
-        padding: 0 10px;
         line-height: 50px;
+        margin-right: 15px;
         float: left;
         position: relative;
+        input[type="text"] {
+          width: 100%;
+          height: 50px;
+          padding-left: 10px;
+        }
         .send-message {
           font-size: 16px;
           color: $blackcolor;
@@ -98,13 +107,20 @@
       .send {
         height: 50px;
         width: 100px;
-        margin-left: 15px;
         background-color: $bluecolor;
         color: white;
         text-align: center;
         line-height: 50px;
         float: right;
-        
+        right: 0;
+        input[type="submit"] {
+          height: 50px;
+          width: 100px;
+          background-color: $bluecolor;
+          color: white;
+          text-align: center;
+          line-height: 50px;
+        }
       }
 
     }
