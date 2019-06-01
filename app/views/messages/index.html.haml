@@ -4,20 +4,23 @@
   
 .right-content
   .content-heading
-    %p.main-group-name main-group-name
-    %p.main-member-name main-member-name
+    %p.main-group-name 
+      =@group.name
+    %p.main-member-name
+      - @group.members.each do |member|
+        = member.user.name
     .edit Edit
   .content-main
-    .message
-      = render partial: "main"
-      = render partial: "main"
+    = render partial: 'message', collection: @messages
+      
   .content-footing
-    .input-box
-      %p.send-message send-message
-      %form
-        %label
-          %i.fas.fa-image
-          %input{ type: "file", style: "display:none"}
-    .send send
-
+    .input-area
+      =form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none"
+          = f.label :image do
+            %i.fas.fa-image
+            = f.file_field :image, style: 'display:none'
+        .send
+          = f.submit value: 'Send', class: 'send-button', style: 'border: none'
 = render partial: 'groups/sideblock'
