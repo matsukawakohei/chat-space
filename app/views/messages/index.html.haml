@@ -4,13 +4,15 @@
   
 .right-content
   .content-heading
-    %p.main-group-name main-group-name
-    %p.main-member-name main-member-name
+    %p.main-group-name 
+      =@group.name
+    %p.main-member-name
+      - @group.members.each do |member|
+        = member.user.name
     .edit Edit
   .content-main
-    .message
-      = render partial: "main"
-      = render partial: "main"
+    = render partial: 'message', collection: @messages
+      
   .content-footing
     .input-area
       =form_for [@group, @message] do |f|
@@ -21,5 +23,4 @@
             = f.file_field :image, style: 'display:none'
         .send
           = f.submit value: 'Send', class: 'send-button', style: 'border: none'
-
 = render partial: 'groups/sideblock'
