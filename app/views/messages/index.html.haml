@@ -17,8 +17,8 @@
     .input-area
       =form_for [@group, @message] do |f|
         .input-box
-          = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none"
-          = f.label :image do
+          = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none", id: 'new-message'
+          = f.label :image, id: 'new-message' do
             %i.fas.fa-image
             = f.file_field :image, style: 'display:none'
         .send
