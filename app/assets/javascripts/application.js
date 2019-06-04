@@ -13,6 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require main/bootstrap.min.js
-//= require froala_editor.min.js
-//= require_tree ./main
+//= require_tree .
