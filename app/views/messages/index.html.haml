@@ -15,12 +15,12 @@
       
   .content-footing
     .input-area
-      =form_for [@group, @message] do |f|
+      = form_for([@group, @message], html: { id: 'new_input' }) do |f|
         .input-box
-          = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none", id: 'new-message'
-          = f.label :image, id: 'new-message' do
+          = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none", id: 'input'
+          = f.label :image do
             %i.fas.fa-image
-            = f.file_field :image, style: 'display:none'
+            = f.file_field :image, class: 'hidden'
         .send
           = f.submit value: 'Send', class: 'send-button', style: 'border: none'
 = render partial: 'groups/sideblock'

@@ -37,6 +37,7 @@
       height: calc(100vh - 190px);
       padding: 46px 40px 0;
       background-color: #fafafa;
+      overflow: scroll;
       .message {
         height: 50px;
         margin-bottom: 40px;
@@ -102,6 +103,9 @@
           top: 10px;
 
         }
+        .hidden {
+          display: none;
+        }
 
       }
       .send {
@@ -120,9 +124,10 @@
           color: white;
           text-align: center;
           line-height: 50px;
-        }
       }
 
     }
 
 }
+        
+        }

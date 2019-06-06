@@ -1,15 +1,49 @@
 $(document).on('turbolinks:load', function(){
-  $('#new_message').on('submit', function(e){
+  function buildHTML(message){
+    var body = message.body? `${ message.body }` : "";
+    var img = message.image ? `<img src= ${ message.image }>` : "";
+    var html = `<div class="message">
+                 <div class="message-info">
+                   <p class="messenger-name"> 
+                     ${message.user_name}
+                   </p>
+                   <p class="post-date">
+                     ${message.date}
+                   </p>
+                 </div>
+                 <p class="main-post-message">
+                     ${body}
+                     ${img}
+                 </p>
+                </div>`
+    return html;
+  }
+  function scrollBottom(){
+   $('.content-main').animate({scrollTop:$('.content-main')[0].scrollHeight});
+  }
+  $('#new_input').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
-    $(this).attr('action')
-    $.ajax({  
+    var url = $(this).attr('action')
+    $.ajax({
       url: url,
-      type: 'POST',
+      type: "POST",
       data: message,
       dataType: 'json',
       processData: false,
       contentType: false
-    })
   })
-});
+  .done(function(data){
+    var html = buildHTML(data);
+    $('.content-main').append(html);
+    $('#input').val('');
+    scrollBottom()
+  })
+  .fail(function(data){
+    alert('エラーが発生したためメッセージは送信できませんでした。');
+  })
+  .always(function(data){
+    $('.send-button').prop('disabled', false);
+  })
+})
+})
