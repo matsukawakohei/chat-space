@@ -37,8 +37,8 @@
       height: calc(100vh - 190px);
       padding: 46px 40px 0;
       background-color: #fafafa;
+      overflow: scroll;
       .message {
-        height: 50px;
         margin-bottom: 40px;
         .message-info {
           display: flex;
@@ -57,10 +57,14 @@
          }
 
         }
-      .post-message {
+      .main-post-message {
         font-size: 14px;
         color: $blackcolor;
+        margin-bottom: 10px;
 
+      }
+      .image {
+        height: 133px;
       }
 
       }
@@ -90,6 +94,9 @@
           height: 50px;
           padding-left: 10px;
         }
+        .image {
+          height: 50px;
+        }
         .send-message {
           font-size: 16px;
           color: $blackcolor;
@@ -101,6 +108,9 @@
           right: 10px;
           top: 10px;
 
+        }
+        .hidden {
+          display: none;
         }
 
       }
@@ -120,9 +130,10 @@
           color: white;
           text-align: center;
           line-height: 50px;
-        }
       }
 
     }
 
 }
+        
+        }
