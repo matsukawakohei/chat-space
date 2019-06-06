@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
     var body = message.body? `${ message.body }` : "";
-    var img = message.image ? `<img src= ${ message.image }>` : "";
+    var img = message.image ? `<img class='image', alt='Bg', src= ${ message.image } >` : "";
     var html = `<div class="message">
                  <div class="message-info">
                    <p class="messenger-name"> 
@@ -13,6 +13,8 @@ $(document).on('turbolinks:load', function(){
                  </div>
                  <p class="main-post-message">
                      ${body}
+                 </p>
+                 <p class="main-post-image">    
                      ${img}
                  </p>
                 </div>`
@@ -36,7 +38,7 @@ $(document).on('turbolinks:load', function(){
   .done(function(data){
     var html = buildHTML(data);
     $('.content-main').append(html);
-    $('#input').val('');
+    $('form')[0].reset();
     scrollBottom()
   })
   .fail(function(data){

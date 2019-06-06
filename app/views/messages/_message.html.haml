@@ -7,5 +7,6 @@
   %p.main-post-message
     - if message.body.present?
       = message.body
+  %p.main-post-image
     - if message.image.present?
-      = image_tag message.image.url, class: 'lower-message__image'
+      = image_tag message.image.url, class: 'image'
