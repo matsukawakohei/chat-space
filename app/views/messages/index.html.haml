@@ -1,7 +1,3 @@
-
-%header.header
-  %p グループを作成しました
-  
 .right-content
   .content-heading
     %p.main-group-name 
@@ -9,7 +5,9 @@
     %p.main-member-name
       - @group.members.each do |member|
         = member.user.name
-    .edit Edit
+    .edit
+      = link_to edit_group_path(@group.id) do
+        Edit
   .content-main
     = render partial: 'message', collection: @messages
       
