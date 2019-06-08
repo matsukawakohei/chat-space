@@ -139,3 +139,19 @@
     font-size: 13px;
   }
 }
+
+.chat-group-user {
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  &.__name {
+    float: left;
+    .chat-group-form .chat-group-user {
+      float: right;
+      cursor: pointer;
+
+    }
+  }
+
+}
