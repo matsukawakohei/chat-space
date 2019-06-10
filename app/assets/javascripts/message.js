@@ -71,6 +71,6 @@ var reloadMessages = function() {
   .fail(function() {
     alert('自動更新に失敗しました');
   });
+  setInterval(reloadMessages, 5000);
 };
-setInterval(reloadMessages, 5000);
 })
