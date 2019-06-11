@@ -17,7 +17,7 @@
         .input-box
           = f.text_field :body, placeholder: 'メッセージを入力してください', style: "border: none", id: 'input'
           = f.label :image do
-            %i.fas.fa-image
+            = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         .send
           = f.submit value: 'Send', class: 'send-button', style: 'border: none'
