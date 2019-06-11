@@ -53,8 +53,7 @@ var reloadMessages = function() {
   var reload_url = window.location.href
     reload_url_pattern = '/messages';
     api_url = reload_url.replace(reload_url_pattern, '/api/messages');
-    console.log(reload_url);
-    if (reload_url.match(/^(?=.*groups)(?=.*messages)/)) {
+    if (reload_url.match('groups') && reload_url.match('messages')) {
       $.ajax({
         url: api_url,
         type: 'get',
