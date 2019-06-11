@@ -50,7 +50,7 @@ $(document).on('turbolinks:load', function(){
 })
 var reloadMessages = function() {
   var last_message_id = $('.content-main').children().last().data('id');
-  var reload_url = window.location.href
+  var reload_url = window.location.href;
   if (reload_url.match('groups') && reload_url.match('messages')) {
     reload_url_pattern = '/messages';
     api_url = reload_url.replace(reload_url_pattern, '/api/messages');
