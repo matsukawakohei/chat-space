@@ -74,9 +74,6 @@ var reloadMessages = function() {
   }
 };
 $(function(){
-  setInterval(function(){
-    $('.content-main').animate(reloadMessages)
-  },5000)
 });
 setInterval(reloadMessages, 5000);
 })
