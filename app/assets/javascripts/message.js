@@ -48,7 +48,7 @@ $(document).on('turbolinks:load', function(){
     $('.send-button').prop('disabled', false);
   })
 })
-var reloadMessages = function() {
+function reloadMessages() {
   var last_message_id = $('.content-main').children().last().data('id');
   var reload_url = window.location.href
   reload_url_pattern = '/messages';
