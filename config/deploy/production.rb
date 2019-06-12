@@ -63,7 +63,7 @@
 server '<52.197.214.81>', user: 'ec2-user', roles: %w{app db web}
 set :ssh_options, {
   port: 80,
-  keys: [File.expand_path('koheimatsukawa.pem')],　#'~/.ssh/id_rsa'部分をローカル環境の鍵のパスに
+  keys: [File.expand_path('koheimatsukawa.pem')],
   forward_agent: true,
   auth_methods: %w(publickey)
 }
