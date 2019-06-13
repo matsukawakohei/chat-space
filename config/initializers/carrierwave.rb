@@ -14,3 +14,4 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'chat-space-up'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/chat-space-up'
+end
