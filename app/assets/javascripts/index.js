@@ -18,7 +18,6 @@ $(document).on('turbolinks:load', function(){
   }
   
   $("#user-search-field").on("keyup", function() {
-    console.log('hey')
     var input = $("#user-search-field").val();
     if (input !== "") {
     $.ajax({
@@ -28,10 +27,8 @@ $(document).on('turbolinks:load', function(){
       dataType: 'json'
     })
     .done(function(user) {
-      console.log(user)
       $("#user-search-result").empty();
       if (user.length !== 0) {
-        console.log(user);
         user.forEach(function(user){
           appendUser(user);
         });
