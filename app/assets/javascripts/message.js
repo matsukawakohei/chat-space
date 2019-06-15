@@ -46,6 +46,7 @@ $(document).on('turbolinks:load', function(){
   })
   .always(function(data){
     $('.send-button').prop('disabled', false);
+    $('.send-button').val('send');
   })
 })
 var reloadMessages = function() {

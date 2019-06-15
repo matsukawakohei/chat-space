@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
   var add_list = $("#chat-group-users");
@@ -16,9 +16,10 @@ $(function() {
                 </li>`
     search_list.append(html);
   }
-
+  
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    if (input !== "") {
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -26,8 +27,10 @@ $(function() {
       dataType: 'json'
     })
     .done(function(user) {
+      console.log(user)
       $("#user-search-result").empty();
       if (user.length !== 0) {
+        console.log(user);
         user.forEach(function(user){
           appendUser(user);
         });
@@ -39,6 +42,10 @@ $(function() {
       .fail(function() {
         alert('ユーザー検索に失敗しました');
       })
+    }
+    else{
+      $("#user-search-result").empty();
+    }
   });
   $(document).on('click', '.user-search-add', function(){
     var user_name = $(this).data('user-name');
