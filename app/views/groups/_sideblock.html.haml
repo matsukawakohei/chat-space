@@ -6,7 +6,7 @@
       .icons
         = link_to new_group_path do
           %i.fa.fa-edit
-        =link_to edit_user_registration_path(current_user), method: :get do
+        =link_to edit_user_path(current_user), method: :get do
           %i.fa.fa-cog
   .group
     - current_user.groups.each do |group|
